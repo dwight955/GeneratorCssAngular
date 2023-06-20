@@ -1,23 +1,44 @@
 .title, .opt_title, .opt_inputs, .prw_title, .box{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.box_code, .container{
+    background: rgb(17, 24, 39);
+    margin: auto;
+    width: 800px;
+}
+.code, .opt_inputs, .box-preview{
+    background: rgb(31, 41, 55);
+}
 .title{
     color: white;
     text-align: center;
     padding: 2rem;
     font-size: 35pt;
 }
+.box_code{
+    height: 150px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 1em;
+}
+.code{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 1em;
+    box-sizing: border-box;
+    color: beige;
+    font-family: monospace;
+    font-size: 12pt;
+}
 .container{
     border: 1px solid rgba(255, 255, 255, 0.205);
     border-radius: 20px;
-    margin: auto;
-    width: 800px;
+    margin-bottom: .5em;
     height: 400px;
     padding: 1em 0 1em 0;
     display: flex;
     justify-content: space-around;
-    background: rgb(17, 24, 39);
 }
 /* ------ Styles Options ---------- */
 .options{
@@ -36,14 +57,22 @@
     font-size: 12pt;
     padding: 1em;  
     height: 80%;
-    background: rgb(31, 41, 55);
+    
 }
-.opt_box_inputs input{
+.opt_box_input input{
     width: 100%;
     margin-bottom: .5em;
     height: 30px;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    margin-top: 1em;
+    border-radius: 5px;
+    padding-left: 1em;  
 } 
+
+.opt_box_input label{
+    display: block;
+    font-weight: bolder;
+}
 /*------ Styles Preview ----------*/
 .preview{
     width: 50%;
@@ -51,18 +80,20 @@
 .box-preview{
     width: 100%;
     height: 88%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(31, 41, 55);
+    position: relative;
+    
+    overflow: scroll;
 }
 .box{
     width: 50px;
     height: 50px;
     background: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 8pt;
+    text-align: center;
+    line-height: 50px;
 }
